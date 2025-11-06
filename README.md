@@ -4,7 +4,7 @@ Instale as dependências respeitando a ordem para evitar problemas de build:
 ```python 
 pip install paddlex
 pip install paddlepaddle-gpu==3.2.1 -i https://www.paddlepaddle.org.cn/packages/stable/cu118/
-pip -U "paddleocr[doc-parser]"
+pip install -U "paddleocr[doc-parser]"
 pip install python-multipart
 pip install uvicorn
 pip install fastapi
