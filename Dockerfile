@@ -24,14 +24,15 @@ WORKDIR /app
 COPY . .
 
 # Instala dependências Python
-RUN pip install --no-cache-dir -r requirements_linux.txt -U "paddleocr[doc-parser]"
+# RUN pip install --no-cache-dir -r requirements.txt
+# RUN pip install -U "paddleocr[doc-parser]"
 
-# RUN pip install paddlex
-# RUN pip install paddlepaddle-gpu==3.2.1 -i https://www.paddlepaddle.org.cn/packages/stable/cu118/
-# RUN pip -U "paddleocr[doc-parser]"
-# RUN pip install python-multipart
-# RUN pip install uvicorn
-# RUN pip install fastapi
+RUN pip install paddlex
+RUN pip install paddlepaddle-gpu==3.2.1 -i https://www.paddlepaddle.org.cn/packages/stable/cu118/
+RUN pip install -U "paddleocr[doc-parser]"
+RUN pip install python-multipart
+RUN pip install uvicorn
+RUN pip install fastapi
 
 # Expõe a porta da API
 EXPOSE 8000
