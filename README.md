@@ -10,7 +10,7 @@ pip install fastapi
 ```
 #
 ## Usando o Docker com Container Linux-GPU
-O Dockerfile já esta configurado para OS Linux compativel com GPU conforme pacotes instalados para o modelo da IA para melhor performance.
+O Dockerfile já esta configurado para OS Linux compativel com GPU conforme pacotes instalados para o modelo da IA, a fim de uma melhor performance.
 Para gerar a imagem, abra o Powershell excute no repositório e execute:
 ```powershell
 docker build -t nome-da-sua-imagem .
@@ -22,10 +22,10 @@ docker run -d -p 8000:8000 --gpus all --name nome-da-sua-imagem_dev nome-da-sua-
 ```
 #
 ## Endpoint-OCR
-Use o Postman se for somente para um teste rápido conforme descrito abaixo:
-URL: http://10.0.2.63:8000/ocr
-METHOD: POST
-BODY: form
+Use o Postman se for somente para um teste rápido conforme descrito abaixo:<br>
+URL: http://10.0.2.63:8000/ocr<br>
+METHOD: POST<br>
+BODY: form<br>
 KEY=> file | VALUE: (imagem qualquer para OCR)
 
 ```curl
