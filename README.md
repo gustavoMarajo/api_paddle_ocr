@@ -1,4 +1,5 @@
 # INICIALIZAÇÃO
+Testado com Python V3.10.
 Instale as dependências respeitando a ordem para evitar problemas de build:
 ```python 
 pip install paddlex
