@@ -1,5 +1,5 @@
 # INICIALIZAÇÃO
-Instale as dependencias respeitando a ordem para evitar problemas de build:
+Instale as dependências respeitando a ordem para evitar problemas de build:
 ```python 
 pip install paddlex
 pip install paddlepaddle-gpu==3.2.1 -i https://www.paddlepaddle.org.cn/packages/stable/cu118/
@@ -32,7 +32,7 @@ Depois de gerado a imagem do container, execute:
 docker run -d -p 8000:8000 --gpus all --name nome-da-sua-imagem_dev nome-da-sua-imagem
 ```
 
-A Api esta executando um processamento rápido, mas não ao mesmo tempo. Para ter mum processamento em larga escala, configure mais "workers" no Dockerfile:
+A Api esta executando um processamento rápido, mas não ao mesmo tempo. Para ter um processamento em larga escala, configure mais "workers" no Dockerfile:
 ```dockerfile
 CMD ["python3", "-m", "uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "(5)"]
 ```
