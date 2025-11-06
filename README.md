@@ -8,6 +8,17 @@ pip install python-multipart
 pip install uvicorn
 pip install fastapi
 ```
+
+Para levantar a API, use:
+```prompt
+uvicorn app:app --host 0.0.0.0 --port 8000 --workers 1  
+```
+
+A Api esta executando um processamento rápido, mas não ao mesmo tempo. Para ter mum processamento em larga escala, configure mais "workers":
+```prompt
+uvicorn app:app --host 0.0.0.0 --port 8000 --workers 5  
+```
+Mas se lembre que quanto mais workers, mais recurso será consumido.
 #
 ## Usando o Docker com Container Linux-GPU
 O Dockerfile já esta configurado para OS Linux compativel com GPU conforme pacotes instalados para o modelo da IA, a fim de uma melhor performance.
@@ -20,6 +31,12 @@ Depois de gerado a imagem do container, execute:
 ```powershell
 docker run -d -p 8000:8000 --gpus all --name nome-da-sua-imagem_dev nome-da-sua-imagem
 ```
+
+A Api esta executando um processamento rápido, mas não ao mesmo tempo. Para ter mum processamento em larga escala, configure mais "workers" no Dockerfile:
+```dockerfile
+CMD ["python3", "-m", "uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "(5)"]
+```
+Mas se lembre que quanto mais workers, mais recurso será consumido.
 #
 ## Outros containers
 Para referencia em execução sobre OS e pacotes para compilar o serviço, olhar o arquivo "Dockerfile" da aplicação.

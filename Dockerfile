@@ -38,4 +38,4 @@ RUN pip install fastapi
 EXPOSE 8000
 
 # Comando para iniciar o servidor FastAPI com Uvicorn
-CMD ["python3", "-m", "uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["python3", "-m", "uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "1"]
