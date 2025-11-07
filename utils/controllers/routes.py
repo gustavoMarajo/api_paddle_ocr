@@ -1,0 +1,2 @@
+ROUTE_APP_STATUS = "/"
+ROUTE_OCR = "/ocr"

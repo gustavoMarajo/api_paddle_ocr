@@ -20,7 +20,7 @@ log/
 *~
 *.vscode
 *.idea
-
+*.env
 *.log
 .clang-format
 .clang_format.hook

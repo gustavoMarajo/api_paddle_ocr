@@ -8,6 +8,7 @@ pip install -U "paddleocr[doc-parser]"
 pip install python-multipart
 pip install uvicorn
 pip install fastapi
+pip install python-dotenv
 ```
 
 Para levantar a API, use:
@@ -20,6 +21,22 @@ A Api esta executando um processamento rápido, mas não ao mesmo tempo. Para te
 uvicorn app:app --host 0.0.0.0 --port 8000 --workers 5  
 ```
 Mas se lembre que quanto mais workers, mais recurso será consumido.
+#
+## Variáveis de ambiente
+A aplicação contém algumas variáveis de ambiente, sendo elas:
+```
+API_TOKEN="hueeehueeee"
+PUBLIC_ROUTES="/"
+APP_NAME="API Paddle OCR"
+APP_VERSION="1.0.0"
+```
+
+API_TOKEN => valida no HEADER das requests se é o mesmo configurado<br>
+PUBLIC_ROUTES => rotas que não precisam de autorização/autenticação para acesso<br>
+APP_NAME => nome da API<br>
+APP_VERSION => gerada dinâmicamente pelo Dockerfile com auto incremento<br><br>
+
+OBS: Se estiver rodando local(sem container), no .env adicione o "APP_VERSION" manualmente e seu valor.
 #
 ## Usando o Docker com Container Linux-GPU
 O Dockerfile já esta configurado para OS Linux compativel com GPU conforme pacotes instalados para o modelo da IA, a fim de uma melhor performance.

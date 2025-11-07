@@ -3,3 +3,4 @@ paddlepaddle-gpu==3.2.1 -i https://www.paddlepaddle.org.cn/packages/stable/cu118
 python-multipart
 uvicorn
 fastapi
+python-dotenv
